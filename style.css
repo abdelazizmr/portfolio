@@ -3,6 +3,7 @@ body{
     scroll-behavior: smooth;
     color: #373B69 !important;
     background-color: #ececec !important;
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -39,21 +40,17 @@ nav ul li a {
     text-decoration: none;
     letter-spacing: 1.5;
     color: #152246;
-    transition: .3s all linear;
+    transition: .3s all;
 }
-#about:active{
-    border-bottom: 2px solid #9E679E;
-}
+
 nav ul li a:hover {
     color: #152246;
-    border-bottom: 2px solid #9E679E;
+    border-bottom: 2px solid #83CFDF;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .card {
@@ -85,7 +82,14 @@ main {
 .profession {
     letter-spacing: 2px;
     font-size: 15px;
-    opacity: .9;
+    color: #83CFDF;
+    font-weight: bold;
+    letter-spacing: 2px !important;
+
+}
+.description{
+    opacity: .8;
+    line-height: 1.8;
 }
 .main-title {
     display: flex;
@@ -96,8 +100,12 @@ main {
 .point {
     width: 15px;
     height: 15px;
-    background-color: black;
+    background-color: #83CFDF;
     border-radius:50% ;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    position: relative;
 }
 .title {
     color: black;
@@ -109,12 +117,12 @@ main {
     animation-name: move;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
 }
-.title:hover {
-    background-color: #000000;
+.title:hover , .point:hover{
+    background-color: #83CFDF;
     color: white;
+    border-color: #83CFDF;
+    cursor: pointer;
 }
 @keyframes move {
     0% {
@@ -126,4 +134,54 @@ main {
        100%{
         top: 0px;
     }
+}
+.skills {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.skill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+.skill .skill-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.skill .skill-info .skill-name{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.skill .skill-info .precent{
+    padding: 5px 10px;
+    display: grid;
+    place-items: center;
+    color: #83CFDF;
+    background-color: white;
+}
+
+.skill .progress{
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    background-color: #e0e0e0;
+    border-radius: 0px;
+}
+.skill .progress span {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #83CFDF;
+    transition: 1s all;
 }
