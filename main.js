@@ -1,3 +1,18 @@
+//responsive nav bar 
+
+let openMenu = document.querySelector('#btn-menu')
+openMenu.addEventListener('click',()=>{
+    document.querySelector('.mobile-view ul').classList.toggle('show')
+})
+
+let closeMenu = document.querySelector('#close-menu')
+closeMenu.addEventListener('click',()=>{
+    document.querySelector('.mobile-view ul').classList.remove('show')
+})
+window.addEventListener('scroll',()=>{
+    document.querySelector('.mobile-view ul').classList.remove('show')
+})
+
 //progress animation to skills section
 let skillsSection = document.querySelector('.skills')
 window.onscroll = function(){
@@ -28,6 +43,15 @@ allTitles.forEach(title=>{
     })
 })
 
+//clicking on see more projects
+let seeMore = document.querySelector('.see-more .main-title h4')
+seeMore.addEventListener('click',()=>{
+    if (seeMore.textContent = 'See More <i class="fa-solid fa-arrow-right-long"></i>'){
+        document.querySelector('.more-projects').style.display = 'flex'
+        seeMore.style.display = 'none'
+    }
+    
+})
 
 
 
