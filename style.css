@@ -54,7 +54,7 @@ main {
 }
 
 .card {
-    width: 600px;
+    width: 70%;
     margin: 100px auto;
     display: flex;
     gap: 30px;
@@ -195,7 +195,7 @@ main {
    justify-content: center;
    flex-direction: row;
    flex-wrap: wrap;
-   gap: 50px;
+   gap: 80px;
    padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 50px;
@@ -205,7 +205,13 @@ main {
     background-color: #f6f6f6;
     overflow: hidden;
     box-shadow: 0px 0px 5px 5px rgb(223, 220, 220);
-    position: relative;
+    transition: .2s all;
+    border-radius: 10px;
+}
+.project:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px 10px rgb(223, 220, 220);
+
 }
 
 .project img {
@@ -215,15 +221,13 @@ main {
     transition: .5s all;
     object-position: center;
 }
-/* .hover-img {
+.hover-img {
     position: absolute;
     top: 0;
     right: 0;
     width: 20%;
     height: 400px;
-    transition: .5s all;
-    background-color: transparent;
-} */
+}
 .project div{
     padding: 10px 10px;
     opacity: .8;
@@ -233,4 +237,81 @@ main {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+footer {
+    margin-top: 100px;
+    background-color: #000000;
+    padding: 40px 20px;
+}
+
+footer h4 {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1.8;
+}
+.footer-container{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form input, textarea {
+    width: 100%;
+    margin:10px auto;
+    height: 40px;
+    border-top: 3px solid #83CFDF;
+    padding:20px;
+}
+textarea{
+    height: 200px;
+    resize:none !important;
+}
+.form input::placeholder ,textarea::placeholder{
+    color: #152246;
+    opacity: .7;
+}
+input:focus,textarea:focus{
+    outline: none;
+}
+.send{
+    border-radius: 0px !important;
+}
+.social-medias ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.social-medias ul li {
+    list-style-type: none;
+}
+
+.social-medias ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: .3s all;
+}
+.social-medias ul li a:hover{
+    color: #83CFDF;
+    transform: scale(1.1);
+}
+.social-medias ul li a i{
+    font-size: 25px;
 }
