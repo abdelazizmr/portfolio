@@ -247,12 +247,12 @@
         
             <div class="container footer-container">
                 
-            <form class="form">
-                <input type="text" name="" id="" placeholder="Your name">
-                <input type="text" name="" id="" placeholder="Your phone number">
-                <input type="email" name="" id="" placeholder="Your email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Send me a message.."></textarea>
-                <button class="btn btn-success mt-2 send">Send</button>
+            <form class="form" action="https://formspree.io/f/xkneojlj" method="POST">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="text" name="phone" placeholder="Your phone number" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <textarea name="message" cols="30" rows="10" placeholder="Send me a message.." required></textarea>
+                <button type="submit" name="submit" class="btn btn-success mt-2 send" >Send</button>
             </form>
 
             <div class="social-medias">
